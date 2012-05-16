@@ -3,7 +3,7 @@ override_dh_auto_test:
 	# do nothing here
 
 override_dh_auto_configure:
-	dh_auto_configure -- --prefix=/opt/mono-%SNAPVER%
+	dh_auto_configure -- --prefix=/opt/mono-%SNAPVER% --sysconfdir=/opt/mono-%SNAPVER%/etc
 
 %:
 	dh $@
