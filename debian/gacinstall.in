@@ -21,7 +21,7 @@ if (!defined $mode)
 # Name is simply
 if ($mode eq "name")
 {
-    print "Mono git snapshot %SNAPVER (%GITVER%)\n";
+    print "Mono git snapshot %SNAPVER% (%GITVER%)\n";
     exit 0;
 }
 
