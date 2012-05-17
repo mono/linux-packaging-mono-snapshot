@@ -1,1 +1,2 @@
-/opt
+debian/tmp/opt
+debian/MonoGetAssemblyName.exe /opt/mono-%SNAPVER%/share/mono/

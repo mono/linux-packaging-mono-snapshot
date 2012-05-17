@@ -1,9 +1,22 @@
 #!/usr/bin/make -f
+RUN_MONO = LD_LIBRARY_PATH=debian/tmp/opt/mono-%SNAPVER%/lib MONO_PATH=debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.0 debian/tmp/opt/mono-%SNAPVER%/bin/mono
+
 override_dh_auto_test:
 	# do nothing here
 
 override_dh_auto_configure:
 	dh_auto_configure -- --prefix=/opt/mono-%SNAPVER% --sysconfdir=/opt/mono-%SNAPVER%/etc
+
+override_dh_auto_build:
+	dh_auto_build
+	$(RUN_MONO) mcs/class/lib/build/mcs.exe \
+          -target:exe \
+          -out:debian/MonoGetAssemblyName.exe \
+          debian/MonoGetAssemblyName.cs
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f debian/MonoGetAssemblyName.exe	
 
 %:
 	dh $@
