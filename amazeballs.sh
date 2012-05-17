@@ -1,4 +1,11 @@
 #!/bin/bash
+# amazeballs.sh
+# Copyright 2012 Jo Shields
+#
+# because mono snapshots on debian are totes amazeballs
+#
+# Licensed under WTFPLv2
+
 
 CHECKOUT_ROOT="$HOME/Projects/mono-snapshot/monogit"
 PACKAGING_ROOT="$HOME/Projects/mono-snapshot/debgit"
