@@ -1,3 +1,4 @@
 debian/tmp/opt
 debian/MonoGetAssemblyName.exe /opt/mono-%SNAPVER%/share/mono/
 debian/runtimes.d/mono-%SNAPVER% /usr/share/cli-common/runtimes.d/
+debian/%SNAPVER% /usr/share/mono-snapshot/packages.d/
