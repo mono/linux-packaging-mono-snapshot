@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-RUN_MONO = MONO_PATH=mcs/class/lib/build/ mono/mini/mono mcs/class/lib/build/mcs.exe
+RUN_MONO = MONO_PATH=mcs/class/lib/build/ mono/mini/mono
 
 override_dh_auto_test:
 	# do nothing here
