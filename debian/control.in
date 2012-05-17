@@ -38,7 +38,7 @@ Package: mono-snapshot-%SNAPVER%
 Architecture: amd64 armel armhf i386 ia64 kfreebsd-amd64 kfreebsd-i386 powerpc ppc64 s390x sparc
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         mono-gac (>= 2.8),
+         cli-common (>= 0.4.0),
          mono-snapshot-common (>= 00000001)
 Description: Mono runtime
  Mono is a platform for running and developing applications based on the
