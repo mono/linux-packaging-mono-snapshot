@@ -40,7 +40,7 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          cli-common (>= 0.4.0),
          mono-snapshot-common (>= 00000001)
-Description: Mono runtime
+Description: Mono runtime snapshot (git commit %GITVER)
  Mono is a platform for running and developing applications based on the
  ECMA/ISO Standards. Mono is an open source effort led by Novell.
  Mono provides a complete CLR (Common Language Runtime) including compiler and
