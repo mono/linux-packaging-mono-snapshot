@@ -36,7 +36,7 @@ rm -f debian/gacinstall.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/rules.in > debian/rules
 chmod a+x debian/rules
 rm -f debian/rules.in
-DEBEMAIL="Xamarin MonkeyWrench <directhex@apebox.org>" \
+DEBEMAIL="Xamarin MonkeyWrench <debian@wrench.mono-project.com>" \
 	dch --create --distribution unstable --package mono-snapshot-${TIMESTAMP} --newversion ${TIMESTAMP} \
 	--force-distribution --empty "Git snapshot (commit ID ${GITSTAMP})"
 rm -fr ${PACKAGING_ROOT}/temp
