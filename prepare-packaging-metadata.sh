@@ -7,7 +7,7 @@
 # Licensed under WTFPLv2
 
 
-PACKAGING_ROOT="$( cd "$( dirname "$0" )" && pwd )/debian"
+PACKAGING_ROOT="$( cd "$( dirname "$0" )" && pwd )"
 BUILD_ARCH=$(dpkg-architecture -qDEB_BUILD_ARCH)
 TIMESTAMP=`date --date="@$(cd mono && git log -n1 --format="%at")" +%Y%m%d%H%M%S`
 
