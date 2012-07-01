@@ -10,6 +10,7 @@
 PACKAGING_ROOT="$( cd "$( dirname "$0" )" && pwd )"
 BUILD_ARCH=$(dpkg-architecture -qDEB_BUILD_ARCH)
 TIMESTAMP=`date --date="@$(cd mono && git log -n1 --format="%at")" +%Y%m%d%H%M%S`
+GITSTAMP=`git log -n1 --format="%H"`
 
 echo "Building debian/ folder"
 cp -r $PACKAGING_ROOT/debian mono/
