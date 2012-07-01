@@ -45,3 +45,4 @@ tar xf mono*tar* -C ${PACKAGING_ROOT}/temp
 mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 cd ${PACKAGING_ROOT}/temp/ && tar cjvf mono-snapshot-${TIMESTAMP}_${TIMESTAMP}.tar.bz2 mono-snapshot-${TIMESTAMP} && cd $MONO_ROOT
+mv ${PACKAGING_ROOT}/temp/mono-snapshot*tar* $MONO_ROOT
