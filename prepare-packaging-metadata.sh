@@ -15,7 +15,7 @@ GITSTAMP=`git log -n1 --format="%H"`
 
 echo "Building debian/ folder"
 rm -rf debian/
-cp -r $PACKAGING_ROOT/debian ${MONO_ROOT}
+cp -r ${PACKAGING_ROOT}/debian ${MONO_ROOT}
 cd ${MONO_ROOT}
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.prerm.in > debian/mono-snapshot-${TIMESTAMP}.prerm
 rm -f debian/mono-snapshot.prerm.in
@@ -45,4 +45,4 @@ tar xf mono*tar* -C ${PACKAGING_ROOT}/temp
 mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 cd ${PACKAGING_ROOT}/temp/ && tar cjvf mono-snapshot-${TIMESTAMP}_${TIMESTAMP}.tar.bz2 mono-snapshot-${TIMESTAMP} && cd $MONO_ROOT
-mv ${PACKAGING_ROOT}/temp/mono-snapshot*tar* $MONO_ROOT
+mv ${PACKAGING_ROOT}/temp/mono-snapshot*tar* ${MONO_ROOT}
