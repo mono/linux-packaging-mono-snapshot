@@ -15,8 +15,8 @@ GITSTAMP=`git log -n1 --format="%H"`
 
 echo "Building debian/ folder"
 rm -rf debian/
-cp -r $PACKAGING_ROOT/debian mono/
-cd mono/
+cp -r $PACKAGING_ROOT/debian ${MONO_ROOT}
+cd ${MONO_ROOT}
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.prerm.in > debian/mono-snapshot-${TIMESTAMP}.prerm
 rm -f debian/mono-snapshot.prerm.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.postinst.in > debian/mono-snapshot-${TIMESTAMP}.postinst
