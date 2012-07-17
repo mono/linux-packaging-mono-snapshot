@@ -46,4 +46,3 @@ mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP
 mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 cd ${PACKAGING_ROOT}/temp/ && debuild -S && cd ${MONO_ROOT}
 mv ${PACKAGING_ROOT}/temp/mono-snapshot*tar* ${PACKAGING_ROOT}/temp/mono-snapshot*dsc ${MONO_ROOT}
-rm -fr ${PACKAGING_ROOT}/temp
