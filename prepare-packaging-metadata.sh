@@ -13,8 +13,6 @@ BUILD_ARCH=$(dpkg-architecture -qDEB_BUILD_ARCH)
 TIMESTAMP=`date --date="@$(cd mono && git log -n1 --format="%at")" +%Y%m%d%H%M%S`
 GITSTAMP=`git log -n1 --format="%H"`
 
-echo "Cleaning up old data"
-rm -rf ${PACKAGING_ROOT}/temp/
 echo "Building debian/ folder"
 rm -rf ${MONO_ROOT}/debian/
 cp -r ${PACKAGING_ROOT}/debian ${MONO_ROOT}
@@ -48,3 +46,4 @@ mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP
 mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 cd ${PACKAGING_ROOT}/temp/ && tar cjvf mono-snapshot-${TIMESTAMP}_${TIMESTAMP}.tar.bz2 mono-snapshot-${TIMESTAMP} && cd $MONO_ROOT
 mv ${PACKAGING_ROOT}/temp/mono-snapshot*tar* ${MONO_ROOT}
+rm -fr ${PACKAGING_ROOT}/temp
