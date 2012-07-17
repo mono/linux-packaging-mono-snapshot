@@ -13,6 +13,8 @@ BUILD_ARCH=$(dpkg-architecture -qDEB_BUILD_ARCH)
 TIMESTAMP=`date --date="@$(cd mono && git log -n1 --format="%at")" +%Y%m%d%H%M%S`
 GITSTAMP=`git log -n1 --format="%H"`
 
+echo "Cleaning up old data"
+rm -rf ${PACKAGING_ROOT}/temp/
 echo "Building debian/ folder"
 rm -rf ${MONO_ROOT}/debian/
 cp -r ${PACKAGING_ROOT}/debian ${MONO_ROOT}
