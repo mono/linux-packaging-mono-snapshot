@@ -13,7 +13,9 @@ DEB_BUILD_OPTS="-us -uc"
 if [ "${BUILD_ARCH}" != "amd64" ]
 then
 	DEB_BUILD_OPTS="-B ${DEB_BUILD_OPTS}"
+else
+	DEB_BUILD_OPTS="-b ${DEB_BUILD_OPTS}"
 fi
 
 echo "Building package in ${PACKAGING_ROOT}"
-cd ${PACKAGING_ROOT}/temp/* && dpkg-buildpackage ${DEB_BUILD_OPTS}
+cd ${PACKAGING_ROOT}/temp/* && debuild ${DEB_BUILD_OPTS} --no-lintian
