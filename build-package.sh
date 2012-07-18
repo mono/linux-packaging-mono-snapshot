@@ -18,4 +18,4 @@ else
 fi
 
 echo "Building package in ${PACKAGING_ROOT}"
-cd ${PACKAGING_ROOT}/temp/* && debuild ${DEB_BUILD_OPTS} --lintian-opts --no-lintian
+cd ${PACKAGING_ROOT}/temp/* && debuild --no-lintian ${DEB_BUILD_OPTS}
