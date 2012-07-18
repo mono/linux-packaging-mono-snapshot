@@ -14,7 +14,7 @@ if [ "${BUILD_ARCH}" != "amd64" ]
 then
 	DEB_BUILD_OPTS="-B ${DEB_BUILD_OPTS}"
 else
-	DEB_BUILD_OPTS="-b ${DEB_BUILD_OPTS}"
+	DEB_BUILD_OPTS="${DEB_BUILD_OPTS}"
 fi
 
 echo "Building package in ${PACKAGING_ROOT}"
