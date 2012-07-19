@@ -27,8 +27,10 @@ rm -f debian/control.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/environment.in > debian/${TIMESTAMP}
 rm -f debian/environment.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-unmanaged.in > debian/mono-snapshot-${TIMESTAMP}.install
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-${TIMESTAMP}.install
 rm -f debian/install-unmanaged.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-managed.in > debian/mono-snapshot-${TIMESTAMP}-assemblies.install
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-${TIMESTAMP}-assemblies.install
 rm -f debian/install-managed.in
 mkdir -p debian/runtimes.d
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/gacinstall.in > debian/runtimes.d/mono-${TIMESTAMP}
