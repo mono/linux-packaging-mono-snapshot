@@ -46,4 +46,4 @@ mkdir -p ${PACKAGING_ROOT}/temp
 tar xf ${MONO_ROOT}/mono*tar* -C ${PACKAGING_ROOT}/temp
 mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
-cd ${PACKAGING_ROOT}/temp/mono-snapshot-* && debuild --no-lintian -S -us -uc && cd ${MONO_ROOT}
+cd ${MONO_ROOT}
