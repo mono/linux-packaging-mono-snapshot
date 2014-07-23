@@ -41,7 +41,7 @@ sed "s/%SNAPVER%/$TIMESTAMP/g" debian/rules.in > debian/rules
 chmod a+x debian/rules
 rm -f debian/rules.in
 DEBEMAIL="Xamarin Public Jenkins <jo.shields@xamarin.com>" \
-	dch --create --distribution unstable --package mono-snapshot-${TIMESTAMP} --newversion ${TIMESTAMP} \
+	dch --create --distribution unstable --package mono-snapshot-${TIMESTAMP} --newversion ${TIMESTAMP}-1 \
 	--force-distribution --empty "Git snapshot (commit ID ${GITSTAMP})"
 #rm -fr ${PACKAGING_ROOT}/temp
 #mkdir -p ${PACKAGING_ROOT}/temp
@@ -49,3 +49,4 @@ DEBEMAIL="Xamarin Public Jenkins <jo.shields@xamarin.com>" \
 #mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 #mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 #cd ${MONO_ROOT}
+mv ../mono*tar.bz2 ../mono-snapshot-${TIMESTAMP}_${TIMESTAMP}.orig.tar.bz2
