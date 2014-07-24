@@ -39,6 +39,7 @@ chmod a+x debian/runtimes.d/mono-${TIMESTAMP}
 rm -f debian/gacinstall.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/rules.in > debian/rules
 chmod a+x debian/rules
+echo "3.0 (quilt)" > debian/source/format
 rm -f debian/rules.in
 DEBEMAIL="Xamarin Public Jenkins <jo.shields@xamarin.com>" \
 	dch --create --distribution unstable --package mono-snapshot-${TIMESTAMP} --newversion ${TIMESTAMP}-1 \
