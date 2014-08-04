@@ -39,7 +39,7 @@ Architecture: amd64 armel armhf i386 ia64 kfreebsd-amd64 kfreebsd-i386 powerpc p
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          cli-common (>= 0.4.0),
-         mono-snapshot-%SNAPVER%-assemblies (= %SNAPVER%),
+         mono-snapshot-%SNAPVER%-assemblies (= %SNAPVER%-1),
          mono-snapshot-common (>= 00000001)
 Description: Mono runtime snapshot - runtime (git commit %GITVER)
  Mono is a platform for running and developing applications based on the
