@@ -41,7 +41,7 @@ Depends: ${shlibs:Depends},
          cli-common (>= 0.4.0),
          mono-snapshot-%SNAPVER%-assemblies (= %SNAPVER%-1),
          mono-snapshot-common (>= 00000001)
-Description: Mono runtime snapshot - runtime (git commit %GITVER)
+Description: Mono runtime snapshot - runtime (git commit %GITVER%)
  Mono is a platform for running and developing applications based on the
  ECMA/ISO Standards. Mono is an open source effort led by Novell.
  Mono provides a complete CLR (Common Language Runtime) including compiler and
@@ -55,7 +55,7 @@ Description: Mono runtime snapshot - runtime (git commit %GITVER)
 Package: mono-snapshot-%SNAPVER%-assemblies
 Architecture: all
 Depends: ${misc:Depends}
-Description: Mono runtime snapshot - assemblies (git commit %GITVER)
+Description: Mono runtime snapshot - assemblies (git commit %GITVER%)
  Mono is a platform for running and developing applications based on the
  ECMA/ISO Standards. Mono is an open source effort led by Novell.
  Mono provides a complete CLR (Common Language Runtime) including compiler and
