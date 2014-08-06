@@ -22,7 +22,7 @@ runtime, which can produce and execute CIL (Common Intermediate Language)
 bytecode (aka assemblies), and a class library.
 .
 This package installs the unmanaged components of a snapshot from 
-Xamarin's MonkeyWrench Continuous  Integration server. Use the 
+Xamarin's Jenkins Continuous  Integration server. Use the 
 mono-snapshot command to set up your  environment to actually use it.
 
 %prep
@@ -61,7 +61,7 @@ runtime, which can produce and execute CIL (Common Intermediate Language)
 bytecode (aka assemblies), and a class library.
 .
 This package installs the managed components of a snapshot from 
-Xamarin's MonkeyWrench Continuous  Integration server. Use the 
+Xamarin's Jenkins Continuous  Integration server. Use the 
 mono-snapshot command to set up your environment to actually use it.
 
 %files -n mono-snapshot-%{version}-assemblies
