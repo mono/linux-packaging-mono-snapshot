@@ -17,7 +17,12 @@ debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.config			/opt/mono-%SNAPVER%/lib/mo
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.dll			/opt/mono-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.exe			/opt/mono-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.mdb			/opt/mono-%SNAPVER%/lib/mono/4.5/
+debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.tasks			/opt/mono-%SNAPVER%/lib/mono/4.5/
+debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.targets			/opt/mono-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.rsp			/opt/mono-%SNAPVER%/lib/mono/4.5/
+debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.xsd			/opt/mono-%SNAPVER%/lib/mono/4.5/
+debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/Facades			/opt/mono-%SNAPVER%/lib/mono/4.5/
+debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/MSBuild			/opt/mono-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/compat-2.0			/opt/mono-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/mono-configuration-crypto	/opt/mono-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/monodoc				/opt/mono-%SNAPVER%/lib/mono/
