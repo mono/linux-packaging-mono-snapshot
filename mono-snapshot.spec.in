@@ -51,6 +51,7 @@ rm -fr %buildroot
 
 %package -n mono-snapshot-%{version}-assemblies
 Summary:	Mono runtime snapshot - assemblies (git commit %GITVER%)
+BuildArch:	noarch
 Group:		Development/Languages/Mono
 
 %description -n mono-snapshot-%{version}-assemblies
@@ -101,6 +102,7 @@ mono-snapshot command to set up your environment to actually use it.
 
 %package -n mono-snapshot-latest
 Summary:	Mono runtime snapshot - latest version metapackage
+BuildArch:	noarch
 Requires:	mono-snapshot-%{version}
 
 %description -n mono-snapshot-latest
