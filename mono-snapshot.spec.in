@@ -9,6 +9,7 @@ Source:		mono-snapshot-%SNAPVER%.tar.bz2
 Source1:	%{version}
 URL:		http://www.mono-project.com
 BuildRequires:	libtool
+BuildRequires:	gettext
 BuildRequires:	gcc-c++
 Requires:	mono-snapshot-common
 Requires:	mono-snapshot-%{version}-assemblies
