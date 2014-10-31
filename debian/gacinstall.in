@@ -7,6 +7,7 @@
 # Directives
 use strict;
 use warnings;
+use File::Basename;
 
 # Figure out the mode
 my $mode = shift @ARGV;
@@ -14,7 +15,7 @@ my $mode = shift @ARGV;
 if (!defined $mode)
 {
     print STDERR "E: You must supply a mode\n";
-    print STDERR "E: Use: install, remove, or name\n";
+    print STDERR "E: Use: install-framework, install, remove-framework, remove, or name\n";
     exit 1;
 }
 
@@ -25,12 +26,86 @@ if ($mode eq "name")
     exit 0;
 }
 
+# Get the base directory
+my $basedir = "/usr/share/cli-common/packages.d/";
+# Get the base file
+my $basename = shift @ARGV;
+
+# We're looking to install a framework
+# The program gets the name of the package, then a list of 
+# the (framework version×10, full path) pairs
+if ($mode eq "install-framework")
+{
+    my $framework_prefix = "/opt/mono-%SNAPVER%/lib/mono";
+    # TODO: We could detect this ourselves
+    my %runtime_versions = (20 => "$framework_prefix/2.0",
+			    35 => "$framework_prefix/3.5",
+			    40 => "$framework_prefix/4.0", 
+			    45 => "$framework_prefix/4.5");
+
+    my $uninstall = "$basedir/$basename.mono-framework";
+
+    open UNINSTALL, ">$uninstall"
+	or die "E: Cannot open uninstall: $uninstall";
+
+    while (@ARGV)
+    {
+	my $framework_ver = int(shift @ARGV);
+	my $dll = shift @ARGV;
+
+	if (! exists($runtime_versions{$framework_ver}))
+	{
+	    printf STDERR "W: Attempted to install framework library for unsupported version $framework_ver";
+	    next;
+	}
+
+	my $target = "$runtime_versions{$framework_ver}/" . basename($dll);
+	
+	if (-f $target)
+	{
+	    # Ensure we're idempotent
+	    unlink $target;
+	}
+
+	symlink $dll, $target
+	    or die "E: Unable to install $dll into framework path: $target\n";
+	print UNINSTALL "$target\n";
+    }
+    close UNINSTALL;
+    exit 0;
+}
+
+# Removing is also simple
+if ($mode eq "remove-framework")
+{
+    # Get the uninstall file
+    my $uninstall = "$basedir/$basename.mono-framework";
+
+    if (-f $uninstall)
+    {
+	# Go through the file
+	open UNINSTALL, "<$uninstall" or
+	    die "E: Cannot open uninstall file ($!)";
+
+	while (<UNINSTALL>)
+	{
+	    chomp;
+	    unlink($_) or
+		printf STDERR "E: Unable to remove $_\n";
+	}
+
+	close UNINSTALL;
+	unlink($uninstall);
+    }
+
+    # We are good
+    exit 0;
+}
+
 # This program gets the name of a file (ending in .installcligac) and
 # a list of assemblies to install, as full paths. The ones given are
 # the only ones that passed the white/blacklisting.
 
-# Get the base file
-my $basename = shift @ARGV;
 my $cligac = "/usr/share/cli-common/packages.d/$basename.installcligac";
 
 if (! -f $cligac)
@@ -38,9 +113,6 @@ if (! -f $cligac)
     print STDERR "E: File does not exist: $cligac\n";
     exit 1;
 }
-
-# Get the base directory
-my $basedir = "/usr/share/cli-common/packages.d/";
 
 # Removing is also simple
 if ($mode eq "remove")
@@ -79,7 +151,7 @@ if ($mode eq "remove")
 if ($mode ne "install")
 {
     print STDERR "E: Unknown mode: $mode\n";
-    print STDERR "E: Use: install, remove or name\n";
+    print STDERR "E: Use: install-framework, install, remove-framework,  remove or name\n";
     exit 1;
 }
 
@@ -101,7 +173,7 @@ while (@ARGV)
     {
 	print STDERR "E: Assembly does not exist: $dll\n";
 	exit 1;
-    }
+    }	
     
     # Figure out the mono's precise name
     my $fullname = get_full_name($dll);
