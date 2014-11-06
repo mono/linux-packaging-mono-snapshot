@@ -12,7 +12,7 @@ use File::Basename;
 # Figure out the mode
 my $mode = shift @ARGV;
 
-my $framework_prefix = "/opt/mono-%SNAPVER%/mono";
+my $framework_prefix = "/opt/mono-%SNAPVER%/lib/mono";
 
 if (!defined $mode)
 {
