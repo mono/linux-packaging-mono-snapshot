@@ -25,7 +25,9 @@
 PACKAGING_ROOT="$( cd "$( dirname "$0" )" && pwd )"
 MONO_ROOT=${PACKAGING_ROOT}/../../
 BUILD_ARCH=$(dpkg-architecture -qDEB_BUILD_ARCH)
-TIMESTAMP=`echo $BUILD_ID | sed 's/[_-]//g'`
+#Broken by Jenkins 1.597
+#TIMESTAMP=`echo $BUILD_ID | sed 's/[_-]//g'`
+TIMESTAMP=`date -u +%Y%m%d%H%M%S`
 GITSTAMP=`cut -f2 -d'/' mono/mini/version.h | sed 's/\"//'`
 
 echo "Building debian/ folder"
