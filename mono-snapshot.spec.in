@@ -38,12 +38,15 @@ make %{?_smp_mflags}
 mkdir -p %{buildroot}/usr/share/mono-snapshot/packages.d/mono
 cp %SOURCE1 %{buildroot}/usr/share/mono-snapshot/packages.d/mono/
 find %{buildroot} -name *.la -delete
+find %{buildroot} -name *.pyc -delete
+find %{buildroot} -name *.pyo -delete
 
 %clean
 rm -fr %buildroot
 
 %files
 /opt/mono-%{version}/bin/*
+/opt/mono-%{version}/lib/lldb/*.py
 /opt/mono-%{version}/lib/*.so*
 /opt/mono-%{version}/lib/*.a
 /opt/mono-%{version}/lib/mono/4.5/*.so
