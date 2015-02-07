@@ -46,6 +46,7 @@ rm -fr %buildroot
 
 %files
 /opt/mono-%{version}/bin/*
+/opt/mono-%{version}/lib/lldb/*.py
 /opt/mono-%{version}/lib/*.so*
 /opt/mono-%{version}/lib/*.a
 /opt/mono-%{version}/lib/mono/4.5/*.so
