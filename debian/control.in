@@ -1,4 +1,4 @@
-Source: mono-snapshot-%SNAPVER%
+Source: mono-4.0-snapshot-%SNAPVER%
 Section: cli-mono
 Priority: optional
 Maintainer: Jo Shields <directhex@apebox.org>
@@ -20,11 +20,11 @@ Homepage: http://www.mono-project.com/
 Vcs-Git: git://github.com/directhex/mono-snapshot.git
 Vcs-Browser: https://github.com/directhex/mono-snapshot
 
-Package: mono-snapshot-latest
+Package: mono-4.0-snapshot-latest
 Architecture: all
-Depends: mono-snapshot-%SNAPVER%,
+Depends: mono-4.0-snapshot-%SNAPVER%,
          ${misc:Depends}
-Description: Mono runtime snapshot - latest version metapackage
+Description: Mono runtime (mono-4.0-branch) snapshot - latest version metapackage
  Mono is a platform for running and developing applications based on the
  ECMA/ISO Standards. Mono is an open source effort led by Novell.
  Mono provides a complete CLR (Common Language Runtime) including compiler and
@@ -34,14 +34,14 @@ Description: Mono runtime snapshot - latest version metapackage
  This metapackage will force installation of the latest snapshot package
  available.
 
-Package: mono-snapshot-%SNAPVER%
+Package: mono-4.0-snapshot-%SNAPVER%
 Architecture: amd64 armel armhf i386 ia64 kfreebsd-amd64 kfreebsd-i386 powerpc ppc64 s390x sparc
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          cli-common (>= 0.9~),
-         mono-snapshot-%SNAPVER%-assemblies (= %SNAPVER%-1),
+         mono-4.0-snapshot-%SNAPVER%-assemblies (= %SNAPVER%-1),
          mono-snapshot-common (>= 00000001)
-Description: Mono runtime snapshot - runtime (git commit %GITVER%)
+Description: Mono runtime (mono-4.0-branch) snapshot - runtime (git commit %GITVER%)
  Mono is a platform for running and developing applications based on the
  ECMA/ISO Standards. Mono is an open source effort led by Novell.
  Mono provides a complete CLR (Common Language Runtime) including compiler and
@@ -52,10 +52,10 @@ Description: Mono runtime snapshot - runtime (git commit %GITVER%)
  Xamarin's Jenkins Continuous  Integration server. Use the 
  mono-snapshot command to set up your  environment to actually use it.
 
-Package: mono-snapshot-%SNAPVER%-assemblies
+Package: mono-4.0-snapshot-%SNAPVER%-assemblies
 Architecture: all
 Depends: ${misc:Depends}
-Description: Mono runtime snapshot - assemblies (git commit %GITVER%)
+Description: Mono runtime (mono-4.0-branch) snapshot - assemblies (git commit %GITVER%)
  Mono is a platform for running and developing applications based on the
  ECMA/ISO Standards. Mono is an open source effort led by Novell.
  Mono provides a complete CLR (Common Language Runtime) including compiler and

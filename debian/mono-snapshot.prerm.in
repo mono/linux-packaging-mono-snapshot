@@ -3,7 +3,7 @@
 if [ "$1" = remove ]; then
         # Remove the GAC
         if [ -x /usr/share/cli-common/gac-remove ]; then
-                /usr/share/cli-common/gac-remove mono-%SNAPVER%
+                /usr/share/cli-common/gac-remove mono-4.0-%SNAPVER%
         fi
 fi
 
