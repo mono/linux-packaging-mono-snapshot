@@ -32,7 +32,7 @@ GITSTAMP=`cut -f2 -d'/' mono/mini/version.h | sed 's/\"//'`
 echo "Building spec file"
 rm -f ${MONO_ROOT}/../${TIMESTAMP}
 cd ${MONO_ROOT}
-sed "s/%SNAPVER%/$TIMESTAMP/g" ${PACKAGING_ROOT}/mono-4.0-snapshot.spec.in > ${MONO_ROOT}/../mono-4.0-snapshot-${TIMESTAMP}.spec
+sed "s/%SNAPVER%/$TIMESTAMP/g" ${PACKAGING_ROOT}/mono-snapshot.spec.in > ${MONO_ROOT}/../mono-4.0-snapshot-${TIMESTAMP}.spec
 sed -i "s/%GITVER%/$GITSTAMP/g" ${MONO_ROOT}/../mono-4.0-snapshot-${TIMESTAMP}.spec
 sed "s/%SNAPVER%/$TIMESTAMP/g" ${PACKAGING_ROOT}/debian/environment.in > ${MONO_ROOT}/../${TIMESTAMP}
 sed -i "s/%GITVER%/$GITSTAMP/g" ${MONO_ROOT}/../${TIMESTAMP}
