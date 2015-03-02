@@ -35,8 +35,8 @@ make %{?_smp_mflags}
 
 %install
 %make_install
-mkdir -p %{buildroot}/usr/share/mono-snapshot/packages.d/mono
-cp %SOURCE1 %{buildroot}/usr/share/mono-snapshot/packages.d/mono/
+mkdir -p %{buildroot}/usr/share/mono-snapshot/packages.d/mono-4.0
+cp %SOURCE1 %{buildroot}/usr/share/mono-snapshot/packages.d/mono-4.0/
 find %{buildroot} -name *.la -delete
 
 %clean

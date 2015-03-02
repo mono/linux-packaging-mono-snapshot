@@ -3,4 +3,4 @@ debian/tmp/opt/mono-4.0-%SNAPVER%/lib/*.so*		/opt/mono-4.0-%SNAPVER%/lib
 debian/tmp/opt/mono-4.0-%SNAPVER%/lib/*.a		/opt/mono-4.0-%SNAPVER%/lib
 debian/tmp/opt/mono-4.0-%SNAPVER%/lib/mono/4.5/*.so	/opt/mono-4.0-%SNAPVER%/lib/mono/4.5/
 debian/runtimes.d/mono-4.0-%SNAPVER%		/usr/share/cli-common/runtimes.d/
-debian/%SNAPVER%				/usr/share/mono-snapshot/packages.d/mono/
+debian/%SNAPVER%				/usr/share/mono-snapshot/packages.d/mono-4.0/
