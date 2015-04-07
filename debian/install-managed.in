@@ -2,6 +2,8 @@ debian/tmp/opt/mono-%SNAPVER%/lib/monodoc				/opt/mono-%SNAPVER%/lib/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono-source-libs			/opt/mono-%SNAPVER%/lib/
 debian/tmp/opt/mono-%SNAPVER%/lib/pkgconfig				/opt/mono-%SNAPVER%/lib/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/gac				/opt/mono-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-%SNAPVER%/lib/mono/2.0				/opt/mono-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-%SNAPVER%/lib/mono/3.5				/opt/mono-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.0				/opt/mono-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.config			/opt/mono-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.dll			/opt/mono-%SNAPVER%/lib/mono/4.5/
