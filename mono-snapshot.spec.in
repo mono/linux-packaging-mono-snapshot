@@ -66,29 +66,31 @@ This package installs the managed components of a snapshot from
 Xamarin's Jenkins Continuous  Integration server. Use the 
 mono-snapshot command to set up your environment to actually use it.
 
-%files -n mono-4.0-snapshot-%{version}-assemblies
-/opt/mono-4.0-%{version}/lib/monodoc
-/opt/mono-4.0-%{version}/lib/mono-source-libs
-/opt/mono-4.0-%{version}/lib/pkgconfig
-/opt/mono-4.0-%{version}/lib/mono/gac
-/opt/mono-4.0-%{version}/lib/mono/4.0
-/opt/mono-4.0-%{version}/lib/mono/4.5/*.config
-/opt/mono-4.0-%{version}/lib/mono/4.5/*.dll
-/opt/mono-4.0-%{version}/lib/mono/4.5/*.exe
-/opt/mono-4.0-%{version}/lib/mono/4.5/*.mdb
-/opt/mono-4.0-%{version}/lib/mono/4.5/*.tasks
-/opt/mono-4.0-%{version}/lib/mono/4.5/*.rsp
-/opt/mono-4.0-%{version}/lib/mono/4.5/*.targets
-/opt/mono-4.0-%{version}/lib/mono/4.5/*.xsd
-/opt/mono-4.0-%{version}/lib/mono/4.5/Facades
-/opt/mono-4.0-%{version}/lib/mono/4.5/MSBuild
-/opt/mono-4.0-%{version}/lib/mono/mono-configuration-crypto
-/opt/mono-4.0-%{version}/lib/mono/monodoc
-/opt/mono-4.0-%{version}/lib/mono/xbuild
-/opt/mono-4.0-%{version}/lib/mono/xbuild-frameworks
-/opt/mono-4.0-%{version}/include
-/opt/mono-4.0-%{version}/etc
-/opt/mono-4.0-%{version}/share
+%files -n mono-snapshot-%{version}-assemblies
+/opt/mono-%{version}/lib/monodoc
+/opt/mono-%{version}/lib/mono-source-libs
+/opt/mono-%{version}/lib/pkgconfig
+/opt/mono-%{version}/lib/mono/gac
+/opt/mono-%{version}/lib/mono/2.0
+/opt/mono-%{version}/lib/mono/3.5
+/opt/mono-%{version}/lib/mono/4.0
+/opt/mono-%{version}/lib/mono/4.5/*.config
+/opt/mono-%{version}/lib/mono/4.5/*.dll
+/opt/mono-%{version}/lib/mono/4.5/*.exe
+/opt/mono-%{version}/lib/mono/4.5/*.mdb
+/opt/mono-%{version}/lib/mono/4.5/*.tasks
+/opt/mono-%{version}/lib/mono/4.5/*.rsp
+/opt/mono-%{version}/lib/mono/4.5/*.targets
+/opt/mono-%{version}/lib/mono/4.5/*.xsd
+/opt/mono-%{version}/lib/mono/4.5/Facades
+/opt/mono-%{version}/lib/mono/4.5/MSBuild
+/opt/mono-%{version}/lib/mono/mono-configuration-crypto
+/opt/mono-%{version}/lib/mono/monodoc
+/opt/mono-%{version}/lib/mono/xbuild
+/opt/mono-%{version}/lib/mono/xbuild-frameworks
+/opt/mono-%{version}/include
+/opt/mono-%{version}/etc
+/opt/mono-%{version}/share
 
 %package -n mono-4.0-snapshot-latest
 Summary:	Mono runtime (mono-4.0-branch) snapshot - latest version metapackage
