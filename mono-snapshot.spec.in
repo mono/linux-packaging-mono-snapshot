@@ -48,7 +48,7 @@ rm -fr %buildroot
 /opt/mono-4.0-%{version}/lib/*.a
 /opt/mono-4.0-%{version}/lib/mono/4.5/*.so
 /opt/mono-4.0-%{version}/lib/mono/lldb/*
-%_usr/share/mono-snapshot/packages.d/mono/*
+%_usr/share/mono-snapshot/packages.d/mono-4.0/*
 
 %package -n mono-4.0-snapshot-%{version}-assemblies
 Summary:	Mono runtime (mono-branch-4.0) snapshot - assemblies (git commit %GITVER%)
