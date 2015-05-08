@@ -66,7 +66,7 @@ This package installs the managed components of a snapshot from
 Xamarin's Jenkins Continuous  Integration server. Use the 
 mono-snapshot command to set up your environment to actually use it.
 
-%files -n mono-snapshot-%{version}-assemblies
+%files -n mono-4.0-snapshot-%{version}-assemblies
 /opt/mono-%{version}/lib/monodoc
 /opt/mono-%{version}/lib/mono-source-libs
 /opt/mono-%{version}/lib/pkgconfig
