@@ -27,7 +27,7 @@ MONO_ROOT=${PACKAGING_ROOT}/../../
 BUILD_ARCH=$(dpkg-architecture -qDEB_BUILD_ARCH)
 #Broken by Jenkins 1.597
 #TIMESTAMP=`echo $BUILD_ID | sed 's/[_-]//g'`
-TIMESTAMP=`date -u +%Y.%m.%d+%H.%M.%S`
+TIMESTAMP=master.`date -u +%Y.%m.%d+%H.%M.%S`
 GITSTAMP=`cut -f2 -d'/' mono/mini/version.h | sed 's/\"//'`
 
 echo "Building debian/ folder"
