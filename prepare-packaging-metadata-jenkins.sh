@@ -27,7 +27,7 @@ MONO_ROOT=${PACKAGING_ROOT}/../../
 BUILD_ARCH=$(dpkg-architecture -qDEB_BUILD_ARCH)
 #Broken by Jenkins 1.597
 #TIMESTAMP=`echo $BUILD_ID | sed 's/[_-]//g'`
-TIMESTAMP=`date -u +%Y-%m-%dT%H.%M.%S`
+TIMESTAMP=`date -u +%Y.%m.%d+%H.%M.%S`
 GITSTAMP=`cut -f2 -d'/' mono/mini/version.h | sed 's/\"//'`
 
 echo "Building debian/ folder"
@@ -59,7 +59,7 @@ chmod a+x debian/rules
 echo "3.0 (quilt)" > debian/source/format
 rm -f debian/rules.in
 DEBEMAIL="Xamarin Public Jenkins <jo.shields@xamarin.com>" \
-	dch --create --distribution unstable --package mono-4.0-snapshot-${TIMESTAMP} --newversion ${TIMESTAMP}-1 \
+	dch --create --distribution unstable --package mono-4.0-snapshot-${TIMESTAMP} --newversion 1:${TIMESTAMP}-1 \
 	--force-distribution --empty "Git snapshot (commit ID ${GITSTAMP})"
 #rm -fr ${PACKAGING_ROOT}/temp
 #mkdir -p ${PACKAGING_ROOT}/temp
