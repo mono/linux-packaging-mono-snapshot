@@ -3,6 +3,7 @@ Summary:	Mono runtime (mono-4.0-branch) snapshot - runtime (git commit %GITVER%)
 Name:		mono-4.0-snapshot-%{version}
 Version:	%{version}
 Release:	0
+Epoch:		1
 License:	LGPLv2+, MIT, Apache 2.0, Ms-PL
 Group:		Development/Languages/Mono
 Source:		mono-4.0-snapshot-%SNAPVER%.tar.bz2
