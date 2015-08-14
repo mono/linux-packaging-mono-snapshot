@@ -28,43 +28,47 @@ BUILD_ARCH=$(dpkg-architecture -qDEB_BUILD_ARCH)
 #Broken by Jenkins 1.597
 #TIMESTAMP=`echo $BUILD_ID | sed 's/[_-]//g'`
 TIMESTAMP=`date -u +%Y.%m.%d+%H.%M.%S`
-GITSTAMP=`cut -f2 -d'/' mono/mini/version.h | sed 's/\"//'`
+GITSTAMP=`cut -f1 -d'/' mono/mini/version.h | sed 's/\"//; s/.* //'`
 
 echo "Building debian/ folder"
 rm -rf ${MONO_ROOT}/debian/
 cp -r ${PACKAGING_ROOT}/debian ${MONO_ROOT}
 cd ${MONO_ROOT}
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.prerm.in > debian/mono-snapshot-${TIMESTAMP}.prerm
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.prerm.in > debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}.prerm
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}.install
 rm -f debian/mono-snapshot.prerm.in
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.postinst.in > debian/mono-snapshot-${TIMESTAMP}.postinst
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.postinst.in > debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}.postinst
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}.postinst
 rm -f debian/mono-snapshot.postinst.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/control.in > debian/control
 sed -i "s/%GITVER%/$GITSTAMP/g" debian/control
 rm -f debian/control.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/environment.in > debian/${TIMESTAMP}
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/${TIMESTAMP}
 rm -f debian/environment.in
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-unmanaged.in > debian/mono-snapshot-${TIMESTAMP}.install
-sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-${TIMESTAMP}.install
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-unmanaged.in > debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}.install
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}.install
 rm -f debian/install-unmanaged.in
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-managed.in > debian/mono-snapshot-${TIMESTAMP}-assemblies.install
-sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-${TIMESTAMP}-assemblies.install
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-managed.in > debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}-assemblies.install
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}-assemblies.install
 rm -f debian/install-managed.in
 mkdir -p debian/runtimes.d
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/gacinstall.in > debian/runtimes.d/mono-${TIMESTAMP}
-sed -i "s/%GITVER%/$GITSTAMP/g" debian/runtimes.d/mono-${TIMESTAMP}
-chmod a+x debian/runtimes.d/mono-${TIMESTAMP}
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/gacinstall.in > debian/runtimes.d/mono-pullreq${GITSTAMP}-${TIMESTAMP}
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/runtimes.d/mono-pullreq${GITSTAMP}-${TIMESTAMP}
+chmod a+x debian/runtimes.d/mono-pullreq${GITSTAMP}-${TIMESTAMP}
 rm -f debian/gacinstall.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/rules.in > debian/rules
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/rules
 chmod a+x debian/rules
 echo "3.0 (quilt)" > debian/source/format
 rm -f debian/rules.in
 DEBEMAIL="Xamarin Public Jenkins <jo.shields@xamarin.com>" \
-	dch --create --distribution unstable --package mono-snapshot-${TIMESTAMP} --newversion 1:${TIMESTAMP}-1 \
-	--force-distribution --empty "Git snapshot (commit ID ${GITSTAMP})"
+	dch --create --distribution unstable --package mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP} --newversion 1:${TIMESTAMP}-1 \
+	--force-distribution --empty "Git snapshot (Pull Request ${GITSTAMP})"
 #rm -fr ${PACKAGING_ROOT}/temp
 #mkdir -p ${PACKAGING_ROOT}/temp
 #tar xf ${MONO_ROOT}/mono*tar* -C ${PACKAGING_ROOT}/temp
 #mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 #mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 #cd ${MONO_ROOT}
-mv ../mono*tar.bz2 ../mono-snapshot-${TIMESTAMP}_${TIMESTAMP}.orig.tar.bz2
+mv ../mono*tar.bz2 ../mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}_${TIMESTAMP}.orig.tar.bz2

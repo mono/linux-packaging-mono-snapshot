@@ -12,7 +12,7 @@ use File::Basename;
 # Figure out the mode
 my $mode = shift @ARGV;
 
-my $framework_prefix = "/opt/mono-%SNAPVER%/lib/mono";
+my $framework_prefix = "/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/mono";
 
 if (!defined $mode)
 {
@@ -24,7 +24,7 @@ if (!defined $mode)
 # Name is simply
 if ($mode eq "name")
 {
-    print "Mono git snapshot %SNAPVER% (%GITVER%)\n";
+    print "Mono PR snapshot %SNAPVER% (%GITVER%)\n";
     exit 0;
 }
 
@@ -141,7 +141,7 @@ if ($mode eq "remove")
 		# If it's not a path, pass the entry to gacutil to uninstall
 		if ($assembly !~ /^\//)
 		{
-		    my $cmd = "/opt/mono-%SNAPVER%/bin/gacutil -u $assembly > /dev/null";
+		    my $cmd = "/opt/mono-pullreq%GITVER%-%SNAPVER%/bin/gacutil -u $assembly > /dev/null";
 		    my $res = system($cmd);
 		    if ($res > 0) {
 			print STDERR "W: removing assembly: $assembly failed!\n";
@@ -229,7 +229,7 @@ while (@ARGV)
 	# absolute paths). There isn't a problem of doing too many
 	# since we typically run from the root context.
 	my $cmd = "(cd `dirname $dll` && "
-	    . "/opt/mono-%SNAPVER%/bin/gacutil -i `basename $dll`"
+	    . "/opt/mono-pullreq%GITVER%-%SNAPVER%/bin/gacutil -i `basename $dll`"
 	    . " > /dev/null)";
 	system($cmd) == 0 or die "E: installing Assembly $dll failed\n";
     }
@@ -267,7 +267,7 @@ sub get_full_name
     my $dll = shift;
 
     # Open a pipe to monop
-    my $cmd = "LANG=C /opt/mono-%SNAPVER%/bin/mono /opt/mono-%SNAPVER%/share/mono/MonoGetAssemblyName.exe $dll";
+    my $cmd = "LANG=C /opt/mono-pullreq%GITVER%-%SNAPVER%/bin/mono /opt/mono-pullreq%GITVER%-%SNAPVER%/share/mono/MonoGetAssemblyName.exe $dll";
     open PIPE, "$cmd |" or die "E: Cannot open pipe to assembly builder $dll";
 
     # This generate a single line that produces the desired results

@@ -2,7 +2,7 @@
 
 # Install the GAC
 if [ -x /usr/share/cli-common/gac-install ]; then
-        /usr/share/cli-common/gac-install mono-%SNAPVER%
+        /usr/share/cli-common/gac-install mono-pullreq%GITVER%-%SNAPVER%
 fi
 
 #DEBHELPER#

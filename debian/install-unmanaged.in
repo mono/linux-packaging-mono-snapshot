@@ -1,6 +1,6 @@
-debian/tmp/opt/mono-%SNAPVER%/bin		/opt/mono-%SNAPVER%/
-debian/tmp/opt/mono-%SNAPVER%/lib/*.so*		/opt/mono-%SNAPVER%/lib
-debian/tmp/opt/mono-%SNAPVER%/lib/*.a		/opt/mono-%SNAPVER%/lib
-debian/tmp/opt/mono-%SNAPVER%/lib/mono/4.5/*.so	/opt/mono-%SNAPVER%/lib/mono/4.5/
-debian/runtimes.d/mono-%SNAPVER%		/usr/share/cli-common/runtimes.d/
-debian/%SNAPVER%				/usr/share/mono-snapshot/packages.d/mono/
+debian/tmp/opt/mono-pullreq%GITVER%-%SNAPVER%/bin		/opt/mono-pullreq%GITVER%-%SNAPVER%/
+debian/tmp/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/*.so*		/opt/mono-pullreq%GITVER%-%SNAPVER%/lib
+debian/tmp/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/*.a		/opt/mono-pullreq%GITVER%-%SNAPVER%/lib
+debian/tmp/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/mono/4.5/*.so	/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/mono/4.5/
+debian/runtimes.d/mono-pullreq%GITVER%-%SNAPVER%		/usr/share/cli-common/runtimes.d/
+debian/pullreq%GITVER%-%SNAPVER%				/usr/share/mono-snapshot/packages.d/mono/
