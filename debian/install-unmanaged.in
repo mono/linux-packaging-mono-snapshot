@@ -3,4 +3,4 @@ debian/tmp/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/*.so*		/opt/mono-pullreq%GITVE
 debian/tmp/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/*.a		/opt/mono-pullreq%GITVER%-%SNAPVER%/lib
 debian/tmp/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/mono/4.5/*.so	/opt/mono-pullreq%GITVER%-%SNAPVER%/lib/mono/4.5/
 debian/runtimes.d/mono-pullreq%GITVER%-%SNAPVER%		/usr/share/cli-common/runtimes.d/
-debian/pullreq%GITVER%-%SNAPVER%				/usr/share/mono-snapshot/packages.d/mono/
+debian/%SNAPVER%				/usr/share/mono-snapshot/packages.d/mono-pullreq%GITVER%/
