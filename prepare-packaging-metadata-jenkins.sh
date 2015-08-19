@@ -43,8 +43,8 @@ rm -f debian/mono-snapshot.postinst.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/control.in > debian/control
 sed -i "s/%GITVER%/$GITSTAMP/g" debian/control
 rm -f debian/control.in
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/environment.in > debian/${TIMESTAMP}
-sed -i "s/%GITVER%/$GITSTAMP/g" debian/${TIMESTAMP}
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/environment.in > debian/${GITSTAMP}-${TIMESTAMP}
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/${GITSTAMP}-${TIMESTAMP}
 rm -f debian/environment.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-unmanaged.in > debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}.install
 sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-snapshot-pullreq${GITSTAMP}-${TIMESTAMP}.install
