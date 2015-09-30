@@ -32,7 +32,7 @@ mono-snapshot command to set up your  environment to actually use it.
 
 %build
 ./configure --prefix=/opt/mono-%{version}
-make %{?_smp_mflags}
+make
 
 %install
 %make_install
