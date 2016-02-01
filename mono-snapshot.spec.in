@@ -72,9 +72,10 @@ mono-snapshot command to set up your environment to actually use it.
 /opt/mono-4.2-%{version}/lib/mono-source-libs
 /opt/mono-4.2-%{version}/lib/pkgconfig
 /opt/mono-4.2-%{version}/lib/mono/gac
-/opt/mono-4.2-%{version}/lib/mono/2.0
-/opt/mono-4.2-%{version}/lib/mono/3.5
-/opt/mono-4.2-%{version}/lib/mono/4.0
+/opt/mono-4.2-%{version}/lib/mono/2.0-api
+/opt/mono-4.2-%{version}/lib/mono/3.5-api
+/opt/mono-4.2-%{version}/lib/mono/4.0-api
+/opt/mono-4.2-%{version}/lib/mono/4.5-api
 /opt/mono-4.2-%{version}/lib/mono/4.5/*.config
 /opt/mono-4.2-%{version}/lib/mono/4.5/*.dll
 /opt/mono-4.2-%{version}/lib/mono/4.5/*.exe
