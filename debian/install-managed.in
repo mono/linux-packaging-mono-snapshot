@@ -6,6 +6,7 @@ debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/2.0-api				/opt/mono-4.2-%SNAPVER%/li
 debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/3.5-api				/opt/mono-4.2-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/4.0-api				/opt/mono-4.2-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/4.5-api				/opt/mono-4.2-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/4.0				/opt/mono-4.2-%SNAPVER%/lib/mono/4.0/
 debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/4.5/*.config			/opt/mono-4.2-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/4.5/*.dll			/opt/mono-4.2-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/4.5/*.exe			/opt/mono-4.2-%SNAPVER%/lib/mono/4.5/
