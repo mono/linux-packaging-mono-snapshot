@@ -39,10 +39,7 @@ my $basename = shift @ARGV;
 if ($mode eq "install-framework")
 {
     # TODO: We could detect this ourselves
-    my %runtime_versions = (20 => "$framework_prefix/2.0",
-			    35 => "$framework_prefix/3.5",
-			    40 => "$framework_prefix/4.0", 
-			    45 => "$framework_prefix/4.5");
+    my %runtime_versions = (45 => "$framework_prefix/4.5");
 
     my $uninstall = "$basedir/$basename.mono-framework";
 
