@@ -10,6 +10,9 @@ override_dh_auto_configure:
 override_dh_strip:
 	dh_strip -k
 
+override_dh_strip:
+	dh_strip -k
+
 override_dh_auto_build:
 	dh_auto_build
 	$(RUN_MONO) mcs/class/lib/build/mcs.exe \
