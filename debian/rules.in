@@ -7,6 +7,9 @@ override_dh_auto_test:
 override_dh_auto_configure:
 	dh_auto_configure -- --prefix=/opt/mono-4.0-%SNAPVER% --sysconfdir=/opt/mono-4.0-%SNAPVER%/etc
 
+override_dh_strip:
+	dh_strip -k
+
 override_dh_auto_build:
 	dh_auto_build
 	$(RUN_MONO) mcs/class/lib/build/mcs.exe \
