@@ -34,32 +34,32 @@ echo "Building debian/ folder"
 rm -rf ${MONO_ROOT}/debian/
 cp -r ${PACKAGING_ROOT}/debian ${MONO_ROOT}
 cd ${MONO_ROOT}
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-4.2-snapshot.prerm.in > debian/mono-4.2-snapshot-${TIMESTAMP}.prerm
-rm -f debian/mono-4.2-snapshot.prerm.in
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-4.2-snapshot.postinst.in > debian/mono-4.2-snapshot-${TIMESTAMP}.postinst
-rm -f debian/mono-4.2-snapshot.postinst.in
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-4.4-snapshot.prerm.in > debian/mono-4.4-snapshot-${TIMESTAMP}.prerm
+rm -f debian/mono-4.4-snapshot.prerm.in
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-4.4-snapshot.postinst.in > debian/mono-4.4-snapshot-${TIMESTAMP}.postinst
+rm -f debian/mono-4.4-snapshot.postinst.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/control.in > debian/control
 sed -i "s/%GITVER%/$GITSTAMP/g" debian/control
 rm -f debian/control.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/environment.in > debian/${TIMESTAMP}
 rm -f debian/environment.in
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-unmanaged.in > debian/mono-4.2-snapshot-${TIMESTAMP}.install
-sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-4.2-snapshot-${TIMESTAMP}.install
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-unmanaged.in > debian/mono-4.4-snapshot-${TIMESTAMP}.install
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-4.4-snapshot-${TIMESTAMP}.install
 rm -f debian/install-unmanaged.in
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-managed.in > debian/mono-4.2-snapshot-${TIMESTAMP}-assemblies.install
-sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-4.2-snapshot-${TIMESTAMP}-assemblies.install
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/install-managed.in > debian/mono-4.4-snapshot-${TIMESTAMP}-assemblies.install
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/mono-4.4-snapshot-${TIMESTAMP}-assemblies.install
 rm -f debian/install-managed.in
 mkdir -p debian/runtimes.d
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/gacinstall.in > debian/runtimes.d/mono-4.2-${TIMESTAMP}
-sed -i "s/%GITVER%/$GITSTAMP/g" debian/runtimes.d/mono-4.2-${TIMESTAMP}
-chmod a+x debian/runtimes.d/mono-4.2-${TIMESTAMP}
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/gacinstall.in > debian/runtimes.d/mono-4.4-${TIMESTAMP}
+sed -i "s/%GITVER%/$GITSTAMP/g" debian/runtimes.d/mono-4.4-${TIMESTAMP}
+chmod a+x debian/runtimes.d/mono-4.4-${TIMESTAMP}
 rm -f debian/gacinstall.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/rules.in > debian/rules
 chmod a+x debian/rules
 echo "3.0 (quilt)" > debian/source/format
 rm -f debian/rules.in
 DEBEMAIL="Xamarin Public Jenkins <jo.shields@xamarin.com>" \
-	dch --create --distribution unstable --package mono-4.2-snapshot-${TIMESTAMP} --newversion 1:${TIMESTAMP}-1 \
+	dch --create --distribution unstable --package mono-4.4-snapshot-${TIMESTAMP} --newversion 1:${TIMESTAMP}-1 \
 	--force-distribution --empty "Git snapshot (commit ID ${GITSTAMP})"
 #rm -fr ${PACKAGING_ROOT}/temp
 #mkdir -p ${PACKAGING_ROOT}/temp
@@ -67,4 +67,4 @@ DEBEMAIL="Xamarin Public Jenkins <jo.shields@xamarin.com>" \
 #mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 #mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 #cd ${MONO_ROOT}
-mv ../mono*tar.bz2 ../mono-4.2-snapshot-${TIMESTAMP}_${TIMESTAMP}.orig.tar.bz2
+mv ../mono*tar.bz2 ../mono-4.4-snapshot-${TIMESTAMP}_${TIMESTAMP}.orig.tar.bz2

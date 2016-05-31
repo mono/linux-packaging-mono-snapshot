@@ -1,6 +1,6 @@
-debian/tmp/opt/mono-4.2-%SNAPVER%/bin		/opt/mono-4.2-%SNAPVER%/
-debian/tmp/opt/mono-4.2-%SNAPVER%/lib/*.so*		/opt/mono-4.2-%SNAPVER%/lib
-debian/tmp/opt/mono-4.2-%SNAPVER%/lib/*.a		/opt/mono-4.2-%SNAPVER%/lib
-debian/tmp/opt/mono-4.2-%SNAPVER%/lib/mono/4.5/*.so	/opt/mono-4.2-%SNAPVER%/lib/mono/4.5/
-debian/runtimes.d/mono-4.2-%SNAPVER%		/usr/share/cli-common/runtimes.d/
-debian/%SNAPVER%				/usr/share/mono-snapshot/packages.d/mono-4.2/
+debian/tmp/opt/mono-4.4-%SNAPVER%/bin		/opt/mono-4.4-%SNAPVER%/
+debian/tmp/opt/mono-4.4-%SNAPVER%/lib/*.so*		/opt/mono-4.4-%SNAPVER%/lib
+debian/tmp/opt/mono-4.4-%SNAPVER%/lib/*.a		/opt/mono-4.4-%SNAPVER%/lib
+debian/tmp/opt/mono-4.4-%SNAPVER%/lib/mono/4.5/*.so	/opt/mono-4.4-%SNAPVER%/lib/mono/4.5/
+debian/runtimes.d/mono-4.4-%SNAPVER%		/usr/share/cli-common/runtimes.d/
+debian/%SNAPVER%				/usr/share/mono-snapshot/packages.d/mono-4.4/

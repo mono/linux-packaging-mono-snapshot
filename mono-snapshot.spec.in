@@ -1,20 +1,20 @@
 %define version %SNAPVER%
-Summary:	Mono runtime (mono-4.2-branch) snapshot - runtime (git commit %GITVER%)
-Name:		mono-4.2-snapshot-%{version}
+Summary:	Mono runtime (mono-4.4-branch) snapshot - runtime (git commit %GITVER%)
+Name:		mono-4.4-snapshot-%{version}
 Version:	%{version}
 Release:	0
 Epoch:		1
 License:	LGPLv2+, MIT, Apache 2.0, Ms-PL
 Group:		Development/Languages/Mono
-Source:		mono-4.2-snapshot-%SNAPVER%.tar.bz2
+Source:		mono-4.4-snapshot-%SNAPVER%.tar.bz2
 Source1:	%{version}
 URL:		http://www.mono-project.com
 BuildRequires:	libtool
 BuildRequires:	gettext
 BuildRequires:	gcc-c++
 Requires:	mono-snapshot-common
-Requires:	mono-4.2-snapshot-%{version}-assemblies
-Prefix:		/opt/mono-4.2-%{version}
+Requires:	mono-4.4-snapshot-%{version}-assemblies
+Prefix:		/opt/mono-4.4-%{version}
 %define debug_package %{nil}
 %description
 Mono is a platform for running and developing applications based on the
@@ -28,35 +28,35 @@ Xamarin's Jenkins Continuous  Integration server. Use the
 mono-snapshot command to set up your  environment to actually use it.
 
 %prep
-%autosetup -n mono-4.2-latest
+%autosetup -n mono-4.4-latest
 
 %build
-./configure --prefix=/opt/mono-4.2-%{version}
+./configure --prefix=/opt/mono-4.4-%{version}
 make
 
 %install
 %make_install
-mkdir -p %{buildroot}/usr/share/mono-snapshot/packages.d/mono-4.2
-cp %SOURCE1 %{buildroot}/usr/share/mono-snapshot/packages.d/mono-4.2/
+mkdir -p %{buildroot}/usr/share/mono-snapshot/packages.d/mono-4.4
+cp %SOURCE1 %{buildroot}/usr/share/mono-snapshot/packages.d/mono-4.4/
 find %{buildroot} -name *.la -delete
 
 %clean
 rm -fr %buildroot
 
 %files
-/opt/mono-4.2-%{version}/bin/*
-/opt/mono-4.2-%{version}/lib/*.so*
-/opt/mono-4.2-%{version}/lib/*.a
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.so
-/opt/mono-4.2-%{version}/lib/mono/lldb/*
-%_usr/share/mono-snapshot/packages.d/mono-4.2/*
+/opt/mono-4.4-%{version}/bin/*
+/opt/mono-4.4-%{version}/lib/*.so*
+/opt/mono-4.4-%{version}/lib/*.a
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.so
+/opt/mono-4.4-%{version}/lib/mono/lldb/*
+%_usr/share/mono-snapshot/packages.d/mono-4.4/*
 
-%package -n mono-4.2-snapshot-%{version}-assemblies
-Summary:	Mono runtime (mono-branch-4.2) snapshot - assemblies (git commit %GITVER%)
+%package -n mono-4.4-snapshot-%{version}-assemblies
+Summary:	Mono runtime (mono-branch-4.4) snapshot - assemblies (git commit %GITVER%)
 BuildArch:	noarch
 Group:		Development/Languages/Mono
 
-%description -n mono-4.2-snapshot-%{version}-assemblies
+%description -n mono-4.4-snapshot-%{version}-assemblies
 Mono is a platform for running and developing applications based on the
 ECMA/ISO Standards. Mono is an open source effort led by Novell.
 Mono provides a complete CLR (Common Language Runtime) including compiler and
@@ -67,40 +67,40 @@ This package installs the managed components of a snapshot from
 Xamarin's Jenkins Continuous  Integration server. Use the 
 mono-snapshot command to set up your environment to actually use it.
 
-%files -n mono-4.2-snapshot-%{version}-assemblies
-/opt/mono-4.2-%{version}/lib/monodoc
-/opt/mono-4.2-%{version}/lib/mono-source-libs
-/opt/mono-4.2-%{version}/lib/pkgconfig
-/opt/mono-4.2-%{version}/lib/mono/gac
-/opt/mono-4.2-%{version}/lib/mono/2.0-api
-/opt/mono-4.2-%{version}/lib/mono/3.5-api
-/opt/mono-4.2-%{version}/lib/mono/4.0-api
-/opt/mono-4.2-%{version}/lib/mono/4.5-api
-/opt/mono-4.2-%{version}/lib/mono/4.0
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.config
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.dll
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.exe
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.mdb
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.tasks
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.rsp
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.targets
-/opt/mono-4.2-%{version}/lib/mono/4.5/*.xsd
-/opt/mono-4.2-%{version}/lib/mono/4.5/Facades
-/opt/mono-4.2-%{version}/lib/mono/4.5/MSBuild
-/opt/mono-4.2-%{version}/lib/mono/mono-configuration-crypto
-/opt/mono-4.2-%{version}/lib/mono/monodoc
-/opt/mono-4.2-%{version}/lib/mono/xbuild
-/opt/mono-4.2-%{version}/lib/mono/xbuild-frameworks
-/opt/mono-4.2-%{version}/include
-/opt/mono-4.2-%{version}/etc
-/opt/mono-4.2-%{version}/share
+%files -n mono-4.4-snapshot-%{version}-assemblies
+/opt/mono-4.4-%{version}/lib/monodoc
+/opt/mono-4.4-%{version}/lib/mono-source-libs
+/opt/mono-4.4-%{version}/lib/pkgconfig
+/opt/mono-4.4-%{version}/lib/mono/gac
+/opt/mono-4.4-%{version}/lib/mono/2.0-api
+/opt/mono-4.4-%{version}/lib/mono/3.5-api
+/opt/mono-4.4-%{version}/lib/mono/4.0-api
+/opt/mono-4.4-%{version}/lib/mono/4.5-api
+/opt/mono-4.4-%{version}/lib/mono/4.0
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.config
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.dll
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.exe
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.mdb
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.tasks
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.rsp
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.targets
+/opt/mono-4.4-%{version}/lib/mono/4.5/*.xsd
+/opt/mono-4.4-%{version}/lib/mono/4.5/Facades
+/opt/mono-4.4-%{version}/lib/mono/4.5/MSBuild
+/opt/mono-4.4-%{version}/lib/mono/mono-configuration-crypto
+/opt/mono-4.4-%{version}/lib/mono/monodoc
+/opt/mono-4.4-%{version}/lib/mono/xbuild
+/opt/mono-4.4-%{version}/lib/mono/xbuild-frameworks
+/opt/mono-4.4-%{version}/include
+/opt/mono-4.4-%{version}/etc
+/opt/mono-4.4-%{version}/share
 
-%package -n mono-4.2-snapshot-latest
-Summary:	Mono runtime (mono-4.2-branch) snapshot - latest version metapackage
+%package -n mono-4.4-snapshot-latest
+Summary:	Mono runtime (mono-4.4-branch) snapshot - latest version metapackage
 BuildArch:	noarch
-Requires:	mono-4.2-snapshot-%{version}
+Requires:	mono-4.4-snapshot-%{version}
 
-%description -n mono-4.2-snapshot-latest
+%description -n mono-4.4-snapshot-latest
 Mono is a platform for running and developing applications based on the
 ECMA/ISO Standards. Mono is an open source effort led by Novell.
 Mono provides a complete CLR (Common Language Runtime) including compiler and
@@ -110,4 +110,4 @@ bytecode (aka assemblies), and a class library.
 This metapackage will force installation of the latest snapshot package
 available.
 
-%files -n mono-4.2-snapshot-latest
+%files -n mono-4.4-snapshot-latest
