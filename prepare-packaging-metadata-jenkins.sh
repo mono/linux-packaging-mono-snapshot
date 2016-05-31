@@ -34,10 +34,10 @@ echo "Building debian/ folder"
 rm -rf ${MONO_ROOT}/debian/
 cp -r ${PACKAGING_ROOT}/debian ${MONO_ROOT}
 cd ${MONO_ROOT}
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-4.4-snapshot.prerm.in > debian/mono-4.4-snapshot-${TIMESTAMP}.prerm
-rm -f debian/mono-4.4-snapshot.prerm.in
-sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-4.4-snapshot.postinst.in > debian/mono-4.4-snapshot-${TIMESTAMP}.postinst
-rm -f debian/mono-4.4-snapshot.postinst.in
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.prerm.in > debian/mono-4.4-snapshot-${TIMESTAMP}.prerm
+rm -f debian/mono-snapshot.prerm.in
+sed "s/%SNAPVER%/$TIMESTAMP/g" debian/mono-snapshot.postinst.in > debian/mono-4.4-snapshot-${TIMESTAMP}.postinst
+rm -f debian/mono-snapshot.postinst.in
 sed "s/%SNAPVER%/$TIMESTAMP/g" debian/control.in > debian/control
 sed -i "s/%GITVER%/$GITSTAMP/g" debian/control
 rm -f debian/control.in
