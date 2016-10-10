@@ -12,6 +12,7 @@ URL:		http://www.mono-project.com
 BuildRequires:	libtool
 BuildRequires:	gettext
 BuildRequires:	gcc-c++
+BuildRequires:	cmake
 Requires:	mono-snapshot-common
 Requires:	mono-snapshot-%{version}-assemblies
 Prefix:		/opt/mono-%{version}
