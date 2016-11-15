@@ -5,7 +5,7 @@ override_dh_auto_test:
 	# do nothing here
 
 override_dh_auto_configure:
-	dh_auto_configure -- --prefix=/opt/mono-4.6-%SNAPVER% --sysconfdir=/opt/mono-4.6-%SNAPVER%/etc
+	dh_auto_configure -- --prefix=/opt/mono-4.8-%SNAPVER% --sysconfdir=/opt/mono-4.8-%SNAPVER%/etc
 
 override_dh_strip:
 	dh_strip -k
