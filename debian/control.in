@@ -35,7 +35,7 @@ Description: Mono runtime (mono-4.8-branch) snapshot - latest version metapackag
  available.
 
 Package: mono-4.8-snapshot-%SNAPVER%
-Architecture: amd64 armel armhf arm64 i386 ia64 kfreebsd-amd64 kfreebsd-i386 powerpc ppc64 s390x sparc
+Architecture: amd64 armel armhf arm64 i386 ia64 kfreebsd-amd64 kfreebsd-i386 powerpc ppc64 s390x sparc ppc64el
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          cli-common (>= 0.9~),
