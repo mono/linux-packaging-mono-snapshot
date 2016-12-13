@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-RUN_MONO = MONO_PATH=mcs/class/lib/build/ mono/mini/mono
+RUN_MONO = MONO_PATH=mcs/class/lib/net_4_x/ mono/mini/mono
 
 override_dh_auto_test:
 	# do nothing here
@@ -12,7 +12,7 @@ override_dh_strip:
 
 override_dh_auto_build:
 	dh_auto_build
-	$(RUN_MONO) mcs/class/lib/build/mcs.exe \
+	$(RUN_MONO) mcs/class/lib/net_4_x/mcs.exe \
           -target:exe \
           -out:debian/MonoGetAssemblyName.exe \
           debian/MonoGetAssemblyName.cs
