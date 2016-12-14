@@ -10,7 +10,7 @@ debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.0				/opt/mono-%GITVER%-%SNAPV
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.config			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.dll			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.exe			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
-debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.mdb			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
+debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.pdb			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.tasks			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.targets			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.rsp			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
