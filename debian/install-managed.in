@@ -6,6 +6,12 @@ debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/2.0-api				/opt/mono-%GITVER%-%S
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/3.5-api				/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.0-api				/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5-api				/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5.1-api			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5.2-api			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.6-api				/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.6.1-api			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.6.2-api			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
+debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.7-api				/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.0				/opt/mono-%GITVER%-%SNAPVER%/lib/mono/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.config			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
 debian/tmp/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/*.dll			/opt/mono-%GITVER%-%SNAPVER%/lib/mono/4.5/
