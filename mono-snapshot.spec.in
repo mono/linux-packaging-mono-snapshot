@@ -96,6 +96,7 @@ mono-snapshot command to set up your environment to actually use it.
 /opt/mono-%{version}/lib/mono/4.5/MSBuild
 /opt/mono-%{version}/lib/mono/mono-configuration-crypto
 /opt/mono-%{version}/lib/mono/monodoc
+/opt/mono-%{version}/lib/mono/msbuild
 /opt/mono-%{version}/lib/mono/xbuild
 /opt/mono-%{version}/lib/mono/xbuild-frameworks
 /opt/mono-%{version}/include
