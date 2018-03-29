@@ -93,6 +93,7 @@ mono-snapshot command to set up your environment to actually use it.
 /opt/mono-%{version}/lib/mono/4.5/*.rsp
 /opt/mono-%{version}/lib/mono/4.5/*.targets
 /opt/mono-%{version}/lib/mono/4.5/*.xsd
+/opt/mono-%{version}/lib/mono/4.5/dim
 /opt/mono-%{version}/lib/mono/4.5/Facades
 /opt/mono-%{version}/lib/mono/4.5/MSBuild
 /opt/mono-%{version}/lib/mono/mono-configuration-crypto
