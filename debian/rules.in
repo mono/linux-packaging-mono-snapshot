@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-RUN_MONO = MONO_PATH=mcs/class/lib/net_4_x/ mono/mini/mono
+RUN_MONO = MONO_PATH=mcs/class/lib/net_4_x/ runtime/mono-wrapper
 DH_VERBOSE=1
 
 override_dh_auto_test:
