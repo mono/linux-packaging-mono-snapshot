@@ -36,4 +36,4 @@ sed "s/%SNAPVER%/$TIMESTAMP/g" ${PACKAGING_ROOT}/mono-snapshot.spec.in > ${MONO_
 sed -i "s/%GITVER%/$GITSTAMP/g" ${MONO_ROOT}/../mono-snapshot-${TIMESTAMP}.spec
 sed "s/%SNAPVER%/$TIMESTAMP/g" ${PACKAGING_ROOT}/debian/environment.in > ${MONO_ROOT}/../${TIMESTAMP}
 sed -i "s/%GITVER%/$GITSTAMP/g" ${MONO_ROOT}/../${TIMESTAMP}
-mv ../mono*tar.bz2 ../mono-snapshot-${TIMESTAMP}.tar.bz2
+mv ../mono*tar.xz ../mono-snapshot-${TIMESTAMP}.tar.xz
