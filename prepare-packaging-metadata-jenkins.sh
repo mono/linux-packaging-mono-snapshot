@@ -71,4 +71,4 @@ DEBEMAIL="Xamarin Public Jenkins <jo.shields@xamarin.com>" \
 #mv ${PACKAGING_ROOT}/temp/mono* ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 #mv debian ${PACKAGING_ROOT}/temp/mono-snapshot-${TIMESTAMP}
 #cd ${MONO_ROOT}
-mv ../mono*tar.bz2 ../mono-snapshot-${GITSTAMP}-${TIMESTAMP}_${TIMESTAMP}.orig.tar.bz2
+mv ../mono*tar.xz ../mono-snapshot-${GITSTAMP}-${TIMESTAMP}_${TIMESTAMP}.orig.tar.xz
