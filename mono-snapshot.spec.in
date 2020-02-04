@@ -13,6 +13,7 @@ BuildRequires:	libtool
 BuildRequires:	gettext
 BuildRequires:	gcc-c++
 BuildRequires:	cmake
+BuildRequires:	python36
 Requires:	mono-snapshot-common
 Requires:	mono-snapshot-%{version}-assemblies
 Prefix:		/opt/mono-%{version}
